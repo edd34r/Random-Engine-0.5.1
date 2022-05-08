@@ -901,7 +901,15 @@ class PlayState extends MusicBeatState
 		laneUnderlay.color = FlxColor.BLACK;
 		laneUnderlay.scrollFactor.set();
 		add(laneUnderlayOpponent);
+var creditText:FlxText = new FlxText(876, 648, 348);
 
+		creditText.text = 'PORTED BY\nEDD34R';		creditText.setFormat(Paths.font("vcr.ttf"), 30, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+
+		creditText.cameras = [camHUD];
+
+		creditText.scrollFactor.set();
+
+		add(creditText);
 		add(laneUnderlay);
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
